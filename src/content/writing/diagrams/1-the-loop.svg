@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520" role="img" aria-label="Diagram: phone to orchestrator to builder and reviewer to merge gate, with Claude Code as a side route">
+  <title>The loop: phone, orchestrator, subagents, merge gate</title>
+  <defs>
+    <marker id="f1-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9ca3af"/>
+    </marker>
+    <marker id="f1-pale" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#cbd5e1"/>
+    </marker>
+    <marker id="f1-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#c4b5fd"/>
+    </marker>
+  </defs>
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+
+    <rect x="290" y="14" width="180" height="96" rx="16" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5"/>
+    <circle cx="380" cy="28" r="2.5" fill="#d1d5db"/>
+    <text x="380" y="54" text-anchor="middle" font-size="10" letter-spacing="1.4" fill="#6b7280">PHONE</text>
+    <text x="380" y="76" text-anchor="middle" font-size="14" font-weight="600" fill="#111827">OpenChamber</text>
+    <text x="380" y="94" text-anchor="middle" font-size="10.5" fill="#6b7280">iOS &#183; Android</text>
+
+    <line x1="380" y1="110" x2="380" y2="142" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#f1-grey)"/>
+    <text x="392" y="130" font-size="9.5" fill="#6b7280">status &#183; one checklist</text>
+
+    <rect x="56" y="150" width="172" height="80" rx="12" fill="#f9fafb" stroke="#e5e7eb"/>
+    <text x="72" y="174" font-size="9.5" letter-spacing="1.2" fill="#6b7280">THE REPO</text>
+    <text x="72" y="194" font-size="12" font-weight="600" fill="#111827">PRD &#183; AGENTS</text>
+    <text x="72" y="212" font-size="10.5" fill="#6b7280">the only spec</text>
+
+    <line x1="228" y1="190" x2="248" y2="190" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#f1-grey)"/>
+
+    <rect x="252" y="150" width="252" height="80" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="378" y="174" text-anchor="middle" font-size="9.5" letter-spacing="1.4" fill="#2563eb">ORCHESTRATOR</text>
+    <text x="378" y="194" text-anchor="middle" font-size="13" font-weight="600" fill="#111827">OpenCode Go session</text>
+    <text x="378" y="212" text-anchor="middle" font-size="10.5" fill="#4b5563">plans &#183; delegates &#183; never codes</text>
+
+    <line x1="506" y1="190" x2="562" y2="190" stroke="#c4b5fd" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#f1-violet)"/>
+    <text x="534" y="182" text-anchor="middle" font-size="9.5" fill="#7c3aed">handoff</text>
+
+    <rect x="566" y="150" width="170" height="80" rx="12" fill="#f5f3ff" stroke="#ddd6fe" stroke-dasharray="5 4"/>
+    <text x="651" y="174" text-anchor="middle" font-size="9.5" letter-spacing="1.2" fill="#7c3aed">CLAUDE CODE</text>
+    <text x="651" y="194" text-anchor="middle" font-size="11" fill="#4c1d95">headless &#183; own worktree</text>
+    <text x="651" y="211" text-anchor="middle" font-size="10.5" fill="#6d28d9">for the big tasks</text>
+
+    <rect x="40" y="262" width="680" height="150" rx="16" fill="none" stroke="#cbd5e1" stroke-dasharray="5 4"/>
+    <text x="60" y="286" font-size="9.5" letter-spacing="1.2" fill="#6b7280">SUBAGENTS &#183; ONE TASK EACH</text>
+
+    <rect x="64" y="300" width="250" height="94" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="84" y="326" font-size="13" font-weight="600" fill="#111827">Builder</text>
+    <text x="84" y="348" font-size="10.5" fill="#6b7280">one task &#183; one branch &#183; one PR</text>
+    <text x="84" y="367" font-size="10.5" fill="#6b7280">50 steps &#183; about 300 lines</text>
+    <text x="84" y="385" font-size="10.5" fill="#6b7280">may push feat/* and nothing else</text>
+
+    <line x1="314" y1="344" x2="442" y2="344" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#f1-grey)"/>
+    <text x="378" y="336" text-anchor="middle" font-size="10" fill="#6b7280">PR</text>
+
+    <rect x="446" y="300" width="250" height="94" rx="12" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="466" y="326" font-size="13" font-weight="600" fill="#111827">Reviewer</text>
+    <text x="466" y="348" font-size="10.5" fill="#6b7280">edit: deny &#183; 16 steps</text>
+    <text x="466" y="367" font-size="10.5" fill="#6b7280">provisional verdict first</text>
+    <text x="466" y="385" font-size="10.5" fill="#6b7280">APPROVE or CHANGES on the PR</text>
+
+    <rect x="40" y="438" width="680" height="64" rx="12" fill="#f9fafb" stroke="#e5e7eb"/>
+    <text x="64" y="462" font-size="9.5" letter-spacing="1.2" fill="#6b7280">THE ONLY MERGE PATH</text>
+    <text x="64" y="485" font-size="11.5" fill="#111827">reviewer APPROVE &#8594; CI green &#8594; your explicit yes &#8594; squash merge &#8594; deploy</text>
+
+    <path d="M 40 470 L 16 470 L 16 62 L 286 62" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#f1-pale)"/>
+    <text x="10" y="266" transform="rotate(-90 10 266)" text-anchor="middle" font-size="9.5" fill="#9ca3af">STATUS.md</text>
+  </g>
+</svg>
