@@ -9,7 +9,7 @@ I help multiple founders build their products, so my calendar is filled to the b
 
 Findly, a social app I've been developing for interior designers, has been built almost entirely within those seams.
 
-What made that possible was a custom-built agent harness and workflow built specifically for my hectic schedule.
+What made that possible was a custom-built [agent harness](https://github.com/deionmenor/agent-harness) and workflow built specifically for my hectic schedule.
 
 ![The loop: phone, orchestrator, subagents, merge gate](diagrams/1-the-loop.png)
 
