@@ -1,7 +1,7 @@
 ---
-title: "Why I'm Reading Proust in 2022"
+title: "Why I'm Reading Proust in 2025"
 description: "Why I'm Reading the World's Longest Novel"
-date: 2022-02-15
+date: 2025-02-15
 ---
 
 Though I do call myself a book lover, I've never been a *quick* reader. I always feel like I could be reading more.
