@@ -10,40 +10,35 @@ const links = SITE.links.map((link) => ({
 
 <Base
   title="About"
-  description="About Deion Menor — software engineer and writer."
+  description="About Deion Menor — software engineer, technical consultant, and product designer."
   current="about"
 >
   <header class="page-header">
     <p class="eyebrow">About</p>
     <h1>About me</h1>
-    <p class="page-intro">
-      I'm Deion Menor, a software engineer. I build web things and write about
-      the parts that are hard to learn from documentation: taste, defaults, and
-      the tradeoffs that only show up after you ship.
-    </p>
+    <div class="prose">
+      <p>
+        I'm Deion Menor, a software engineer who is in love with all forms of
+        physical media. After leaving the e-commerce industry after a hectic
+        spike during the pandemic, I helped found an{' '}
+        <a href="https://www.nocode.ph/" rel="noopener noreferrer" target="_blank">initiative</a>{' '}
+        to empower non-technical citizens to get into tech through no-code and
+        low-code tools.
+      </p>
+      <p>
+        Now, I'm helping other non-technical founders launch products as both a
+        technical consultant and product designer.
+      </p>
+    </div>
   </header>
 
   <div class="prose">
-    <p>
-      This site is my home on the web. It collects essays I want to keep, notes
-      that are too long for a message, and a running record of what I'm doing
-      now. I write to think, and I publish because a piece isn't finished until
-      someone else can read it.
-    </p>
-
-    <h2>What I care about</h2>
-    <p>
-      Small tools that do one thing well. Systems that are easy to reason about.
-      Writing that respects the reader's time. I'm suspicious of complexity that
-      arrives before it's needed, and interested in the kind that pays for
-      itself.
-    </p>
-
     <h2>Elsewhere</h2>
     <p>
-      The best way to reach me is on GitHub. The source for this site is there
-      too; it's a small Astro project you're welcome to learn from.
+      The best way to reach me is through my{' '}
+      <a href="mailto:deionmenor@gmail.com?subject=I'd%20like%20to%20connect%20with%20you!">email</a>.
     </p>
+    <p>You can also follow me at the following places:</p>
     <ul>
       {
         links.map((link) => (
@@ -58,17 +53,16 @@ const links = SITE.links.map((link) => ({
           </li>
         ))
       }
-      <li><a href={SITE.repo} rel="noopener noreferrer" target="_blank">Site source</a></li>
     </ul>
 
     <h2>Colophon</h2>
     <p>
       Built with{' '}
-      <a href="https://astro.build" rel="noopener noreferrer" target="_blank">Astro</a>{' '}
+      <a href="https://astro.build/" rel="noopener noreferrer" target="_blank">Astro</a>{' '}
       and deployed on GitHub Pages. Set in a system serif, with a mono for
       metadata. The palette is derived from{' '}
       <a href="https://github.com/kepano/flexoki" rel="noopener noreferrer" target="_blank">Flexoki</a>{' '}
-      (MIT). No trackers, no cookies, no newsletter pop-up.
+      (MIT).
     </p>
   </div>
 </Base>
