@@ -64,3 +64,5 @@ I still don't prefer working from a phone. I'm too fond of my multi-screen setup
 What I want is the arrangement a real organization already has with a junior developer. I spend less time guiding an agent through back and forth, and I trust them to communicate clearly and briefly, so the only thing left for me is the decision.
 
 They do the hard work: summarizing the paths that could succeed, naming the tradeoffs, and surfacing a few options, as infrequently as possible. That leaves me free for the dozens of other things going on in my life.
+
+The harness is open source: [github.com/deionmenor/agent-harness](https://github.com/deionmenor/agent-harness).
