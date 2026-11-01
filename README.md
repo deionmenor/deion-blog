@@ -4,13 +4,13 @@ A small, text-first personal site built with [Astro](https://astro.build). It ha
 a home page, a Writing index with two sample essays, a Now page, an About page,
 an RSS feed, and automatic light/dark themes.
 
-Live at: https://deionmenor.github.io/deion-blog/
+Live at: https://deionmenor.com/
 
 ## Getting started
 
 ```bash
 npm install
-npm run dev      # http://localhost:4321/deion-blog/
+npm run dev      # http://localhost:4321/
 ```
 
 Build and preview the production output:
@@ -68,14 +68,20 @@ One-time setup on GitHub:
 
 ### Custom domain
 
-If you later use a custom domain, update `site` in `astro.config.mjs`, delete
-the `base` line, add a `public/CNAME` file containing the domain, and update
-`SITE.url` / `SITE.repo` in `src/lib/site.ts`.
+The site is configured for `https://deionmenor.com`, served from the repository
+root. The domain is set in **Settings → Pages → Custom domain**, with
+`public/CNAME` kept in sync.
+
+If you move to a different domain, update `site` in `astro.config.mjs`, the
+`url` in `src/lib/site.ts`, and `public/CNAME`. If you move back to
+`https://deionmenor.github.io/deion-blog/`, also add `base: '/deion-blog'` to
+`astro.config.mjs`.
 
 ## Notes
 
 - Internal links go through the `href()` helper in `src/lib/site.ts`, which
-  prefixes the GitHub Pages base path. Use it for any new internal links.
+  prefixes the configured base path (empty at the domain root). Use it for any
+  new internal links.
 - Theme choice is stored in `localStorage`; pressing `d` toggles it.
 - Typography uses system fonts, so there are no web-font requests.
 - Colors are derived from [Flexoki](https://github.com/kepano/flexoki) (MIT).

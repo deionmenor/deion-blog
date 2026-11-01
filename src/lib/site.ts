@@ -7,7 +7,7 @@ export const SITE = {
   tagline: 'Writing about software, systems, and the ideas that stick.',
   description:
     'Essays and notes by Deion Menor on software, systems, and the craft of building things.',
-  url: 'https://deionmenor.github.io',
+  url: 'https://deionmenor.com',
   repo: 'https://github.com/deionmenor/deion-blog',
   github: 'https://github.com/deionmenor',
   // Add more links here; they appear on the About page.
