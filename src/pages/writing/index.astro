@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import { formatDate, getPosts, readingTime } from '../../lib/posts';
+import { href } from '../../lib/site';
+
+const posts = await getPosts();
+---
+
+<Base
+  title="Writing"
+  description="Essays and notes by Deion Menor on software, systems, and the craft of building things."
+  current="writing"
+>
+  <header class="page-header">
+    <p class="eyebrow">Writing</p>
+    <h1>Essays and notes</h1>
+    <p class="page-intro">
+      Longer pieces about software, systems, and the craft of building things.
+      Newest first.
+    </p>
+  </header>
+
+  {
+    posts.length === 0 ? (
+      <p>Nothing published yet.</p>
+    ) : (
+      <ul class="writing-list">
+        {posts.map((post) => (
+          <li>
+            <a href={href(`/writing/${post.id}/`)}>
+              <h2>{post.data.title}</h2>
+              <p class="meta">
+                <span>{formatDate(post.data.date)}</span>
+                <span class="dot" aria-hidden="true">
+                  ·
+                </span>
+                <span>{readingTime(post.body)} min read</span>
+              </p>
+              <p class="dek">{post.data.description}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</Base>

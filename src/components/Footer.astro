@@ -1,0 +1,16 @@
+---
+import { SITE, href } from '../lib/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-links">
+      <a href={href('/rss.xml')}>RSS</a>
+      <span class="dot" aria-hidden="true">·</span>
+      <a href={SITE.github} rel="noopener noreferrer" target="_blank">GitHub</a>
+    </p>
+    <p class="footer-note">© {year} {SITE.name}</p>
+  </div>
+</footer>

@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import { formatDate, getPosts, readingTime } from '../lib/posts';
+import { href } from '../lib/site';
+
+const posts = await getPosts();
+const [featured] = posts;
+---
+
+<Base current="home">
+  <section class="intro">
+    <h1 class="lede">
+      I write about <em>software</em>, systems, and the ideas that stick.
+    </h1>
+    <p>
+      I'm Deion, a software engineer. This is where I publish essays, keep notes
+      on what I'm building, and occasionally change my mind in public.
+    </p>
+  </section>
+
+  {
+    featured && (
+      <section class="section" aria-labelledby="latest">
+        <h2 class="section-label" id="latest">
+          Latest
+        </h2>
+        <a class="feature" href={href(`/writing/${featured.id}/`)}>
+          <h3>{featured.data.title}</h3>
+          <p class="meta">
+            <span>{formatDate(featured.data.date)}</span>
+            <span class="dot" aria-hidden="true">
+              ·
+            </span>
+            <span>{readingTime(featured.body)} min read</span>
+          </p>
+          <p class="dek">{featured.data.description}</p>
+        </a>
+      </section>
+    )
+  }
+
+  <section class="section" aria-labelledby="writing">
+    <h2 class="section-label" id="writing">
+      Writing
+    </h2>
+    <PostList posts={posts} />
+  </section>
+
+  <section class="now-teaser" aria-labelledby="now">
+    <p class="eyebrow" id="now">Now</p>
+    <p>
+      A snapshot of what I'm working on and paying attention to.{' '}
+      <a href={href('/now/')}>See what I'm doing →</a>
+    </p>
+  </section>
+</Base>

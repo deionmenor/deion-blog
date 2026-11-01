@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import { href } from '../lib/site';
+---
+
+<Base title="Page not found" description="That page doesn't exist.">
+  <section class="not-found">
+    <p class="eyebrow">404</p>
+    <h1>Page not found</h1>
+    <p>
+      The link may be broken, or the page may have moved. There isn't much out
+      here.
+    </p>
+    <a href={href('/')}>← Back home</a>
+  </section>
+</Base>

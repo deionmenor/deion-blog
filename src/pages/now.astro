@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import { formatDate } from '../lib/posts';
+import { SITE } from '../lib/site';
+
+const updated = new Date(`${SITE.nowUpdated}T00:00:00Z`);
+---
+
+<Base
+  title="Now"
+  description="What Deion Menor is working on, reading, and learning right now."
+  current="now"
+>
+  <header class="page-header">
+    <p class="eyebrow">Now</p>
+    <h1>What I'm doing now</h1>
+    <p class="page-intro">
+      A snapshot of my focus at the moment, not a biography. Last updated{' '}
+      {formatDate(updated)}.
+    </p>
+  </header>
+
+  <div class="prose now-page">
+    <h2>Building</h2>
+    <p>
+      A small set of web tools, this site among them. I'm rewriting a side
+      project so that the whole thing fits in my head at once: fewer services,
+      fewer dependencies, and a database I can hold in a single file.
+    </p>
+
+    <h2>Writing</h2>
+    <p>
+      Working through a longer essay about defaults — why the settings we never
+      touch shape our work more than the ones we obsess over. Shorter notes go
+      up here as they're ready.
+    </p>
+
+    <h2>Reading</h2>
+    <p>
+      <em>The Art of Doing Science and Engineering</em> by Richard Hamming, one
+      chapter at a time. I keep returning to his point that the important thing
+      is not the answer but the habit of asking better questions.
+    </p>
+
+    <h2>Learning</h2>
+    <p>
+      How far one Postgres database can go before it needs company. So far: much
+      further than I assumed, and with fewer moving parts than the alternatives.
+    </p>
+
+    <h2>Not doing</h2>
+    <p>
+      Adding more tools to my workflow. Fewer tabs, smaller systems, and a
+      shorter list of things I'm pretending to maintain.
+    </p>
+  </div>
+</Base>
