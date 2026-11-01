@@ -750,6 +750,27 @@ main {
   margin-top: 2em;
 }
 
+.prose .now-thumb {
+  margin: 1.6rem 0 0;
+}
+
+.now-thumb a {
+  display: block;
+}
+
+.now-thumb img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  transition: border-color 140ms var(--ease);
+}
+
+.now-thumb a:hover img {
+  border-color: var(--accent);
+}
+
 /* --------------------------------------------------------------- footer */
 
 .site-footer {

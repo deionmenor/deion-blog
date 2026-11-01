@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
+import musilogShot from '../assets/musilog.png';
 import { formatDate } from '../lib/posts';
 import { SITE } from '../lib/site';
 
@@ -27,6 +29,26 @@ const updated = new Date(`${SITE.nowUpdated}T00:00:00Z`);
       <a href="https://musilog.deionmenor.com" rel="noopener noreferrer" target="_blank">musilog</a>, a
       TUI-inspired web app for people too into their music listening history.
     </p>
+
+    <figure class="now-thumb">
+      <a
+        href="https://musilog.deionmenor.com"
+        rel="noopener noreferrer"
+        target="_blank"
+        aria-label="Open musilog.fm"
+      >
+        <Image
+          src={musilogShot}
+          alt="The musilog.fm dashboard, showing a ranked list of top albums and a panel with album details and a tracklist."
+          widths={[480, 800, 1200]}
+          sizes="(max-width: 640px) 100vw, 600px"
+          loading="lazy"
+        />
+      </a>
+      <figcaption>
+        musilog.fm — your listening history, in a terminal-inspired view.
+      </figcaption>
+    </figure>
 
     <h2>Writing</h2>
     <p>
