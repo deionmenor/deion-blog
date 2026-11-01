@@ -4,7 +4,7 @@
  */
 export const SITE = {
   name: 'Deion Menor',
-  tagline: 'Writing about software, systems, and the ideas that stick.',
+  tagline: 'Writing about software, building in public, among other things.',
   description:
     'Essays and notes by Deion Menor on software, systems, and the craft of building things.',
   url: 'https://deionmenor.com',
