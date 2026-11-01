@@ -1,7 +1,7 @@
 ---
 title: I Ship App Features From My Phone Now
 description: A PRD, three agents with deliberately unequal permissions, and a client that fits in a notification shade.
-date: 2026-11-01
+date: 2026-10-28
 tags: [ai, agents, workflow, productivity, tools, open-source]
 ---
 
