@@ -2,6 +2,7 @@
 title: "On Strange Loops"
 description: "What I Am a Strange Loop taught me about consciousness, death, and self-reference."
 date: 2018-08-24
+tags: [books, philosophy, death, consciousness, memory]
 ---
 
 My first encounter with the idea of a strange loop was in a very thick book.

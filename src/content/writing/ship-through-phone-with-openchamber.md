@@ -2,6 +2,7 @@
 title: I Ship App Features From My Phone Now
 description: A PRD, three agents with deliberately unequal permissions, and a client that fits in a notification shade.
 date: 2026-11-01
+tags: [ai, agents, workflow, productivity, tools, open-source]
 ---
 
 I help multiple founders build their products, so my calendar is filled to the brim with client calls. On top of that, my partner and I have ventured into the hectic industry of event planning, so the hours I have for building my own ideas are the seams between them: twenty minutes before a check-in, the queue at the government office, the last hour before I inevitably sleep with my hands still clutched to my mobile device.

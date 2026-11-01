@@ -36,3 +36,36 @@ export function readingTime(body = ''): number {
   const words = body.trim().split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.round(words / 230));
 }
+
+/** Turn a tag slug into its display label: `open-source` -> `open source`. */
+export function tagLabel(tag: string): string {
+  return tag.replace(/-/g, ' ');
+}
+
+export interface Topic {
+  slug: string;
+  label: string;
+  posts: CollectionEntry<'writing'>[];
+}
+
+/** Every tag in use, with its posts, sorted alphabetically. */
+export async function getTopics(): Promise<Topic[]> {
+  const posts = await getPosts();
+  const byTag = new Map<string, CollectionEntry<'writing'>[]>();
+
+  for (const post of posts) {
+    for (const tag of post.data.tags) {
+      const tagged = byTag.get(tag) ?? [];
+      tagged.push(post);
+      byTag.set(tag, tagged);
+    }
+  }
+
+  return [...byTag.entries()]
+    .map(([slug, tagged]) => ({
+      slug,
+      label: tagLabel(slug),
+      posts: tagged,
+    }))
+    .sort((a, b) => a.label.localeCompare(b.label));
+}

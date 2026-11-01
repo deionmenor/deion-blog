@@ -2,6 +2,7 @@
 title: "Working Less with No-Code and AI"
 description: "Slides and notes from my February 2025 virtual talk on workflow automation with no-code tools and AI."
 date: 2025-02-17
+tags: [automation, no-code, ai, workflow, productivity, talks]
 ---
 
 On February 17, 2025, I hosted a free virtual talk on **workflow automation with

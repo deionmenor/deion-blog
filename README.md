@@ -46,6 +46,7 @@ Create a file in `src/content/writing/`, for example `my-new-post.md`:
 title: My new post
 description: A one-sentence summary that appears in lists and search results.
 date: 2026-11-02
+tags: [writing, ai, workflow, tools, productivity]
 ---
 
 Your post starts here. Use `##` for section headings.
@@ -53,7 +54,8 @@ Your post starts here. Use `##` for section headings.
 
 The filename becomes the URL: `/writing/my-new-post/`. Add `draft: true` to a
 post to keep it out of production builds while it is still visible in `npm run
-dev`.
+dev`. Tags are lowercase and hyphenated (e.g. `open-source`); they power the
+Topics section on the home page and each tag's page under `/topics/`.
 
 ## Deploying
 

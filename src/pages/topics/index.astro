@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getTopics } from '../../lib/posts';
+import { href } from '../../lib/site';
+
+const topics = await getTopics();
+---
+
+<Base
+  title="Topics"
+  description="Every topic covered in the writing on Deion Menor's site."
+>
+  <header class="page-header">
+    <p class="eyebrow">Topics</p>
+    <h1>All topics</h1>
+    <p class="page-intro">
+      Everything I've written about, alphabetically. Pick a thread.
+    </p>
+  </header>
+
+  <ul class="topic-list">
+    {
+      topics.map((topic) => (
+        <li>
+          <a href={href(`/topics/${topic.slug}/`)}>
+            <span>{topic.label}</span>
+            <span class="topic-count" aria-label={`${topic.posts.length} posts`}>
+              {topic.posts.length}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Base>

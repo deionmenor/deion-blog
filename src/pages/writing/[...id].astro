@@ -1,7 +1,7 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { formatDate, getPosts, readingTime } from '../../lib/posts';
+import { formatDate, getPosts, readingTime, tagLabel } from '../../lib/posts';
 import { href } from '../../lib/site';
 
 export async function getStaticPaths() {
@@ -46,6 +46,16 @@ const { Content } = await render(post);
     <div class="prose">
       <Content />
     </div>
+
+    {
+      post.data.tags.length > 0 && (
+        <div class="post-tags" aria-label="Topics">
+          {post.data.tags.map((tag) => (
+            <a href={href(`/topics/${tag}/`)}>{tagLabel(tag)}</a>
+          ))}
+        </div>
+      )
+    }
 
     <footer class="post-footer">
       <a class="back-link" href={href('/writing/')}>← All writing</a>

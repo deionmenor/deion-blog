@@ -2,6 +2,7 @@
 title: "Why Is Facebook Rebranding Itself?"
 description: "A look into Facebook's next big bet...the meta-verse."
 date: 2021-10-20
+tags: [internet, platforms, vr, media, technology]
 ---
 
 Facebook Inc. has announced plans earlier this week that they would soon rebrand under a new name. The rebranding effort was said to align with their company's future ambitions: an inter-connected _**metaverse**_.

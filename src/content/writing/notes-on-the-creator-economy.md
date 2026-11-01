@@ -2,6 +2,7 @@
 title: "Notes on the creator economy"
 description: "What freelancing taught me about research, entertainment, and why anyone makes things."
 date: 2021-11-19
+tags: [writing, internet, work, media, creation]
 ---
 
 The creator economy refers to  the growing number of vloggers, bloggers, amateur videographers, coaches, and influencers who use the internet to share their passions and directly earn a living from an audience. Over the past couple months I've become very interested in exploring this space. My current occupation as a freelance writer has acted as a sort of training for me to practice managing my own time, planning my content in advance, and of course, writing (my medium of choice!)

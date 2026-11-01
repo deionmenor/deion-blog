@@ -2,6 +2,7 @@
 title: "My Season of Focus"
 description: "I try out a new way of keeping track of my goals based on CGP Grey's Theme System."
 date: 2021-08-04
+tags: [habits, productivity, goals, systems, work]
 ---
 
 Most people try to start resolutions with a very specific goal in mind. A common one would be the resolution many people have at the beginning of the year to workout or hit the gym. Statistics show that a large majority of people quit their gym membership after a couple months. Though reasons for this may vary from person to person, it's likely that the difficulty of keeping up with resolutions, especially those who set them to high, leads to quitting sooner.

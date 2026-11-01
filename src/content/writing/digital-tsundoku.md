@@ -2,6 +2,7 @@
 title: "Digital Tsundoku"
 description: "The Read-it-later habit"
 date: 2020-12-21
+tags: [reading, habits, internet, attention, books]
 ---
 
 Many readers have probably heard of the term *tsundoku*. This Japanese slang refers to the collection of reading materials which are never read. The word combines elements of tsunde-oku (積んでおく, to pile things up ready for later and leave) and dokusho (読書, reading books). It often comes up in those lists of foreign vocabulary that are deemed untranslateable to English.

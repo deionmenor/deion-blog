@@ -2,6 +2,7 @@
 title: "Power, Knowledge, and the Open Internet"
 description: "Aaron Swartz, open access, and Foucault's power-knowledge relationship."
 date: 2019-04-16
+tags: [internet, philosophy, knowledge, open-source, writing]
 ---
 
 ## The Open Access Movement
