@@ -4,11 +4,11 @@ description: A PRD, three agents with deliberately unequal permissions, and a cl
 date: 2026-11-01
 ---
 
-*A PRD, three agents with deliberately unequal permissions, and a client that fits in a notification shade.*
+I freelance. My calendar is filled to the brim with client calls, and the hours I have for my own product are the seams between them: twenty minutes before a standup, the queue at the bank, the last hour before I inevitably sleep with my hands still clutched to my mobile device.
 
-I freelance. My calendar is client calls, and the hours I have for my own product are the seams between them: twenty minutes before a standup, the queue at the bank, the last hour before sleep. Findtopia, a community app for interior designers, has been built almost entirely in those seams.
+*Findly*, a social app for interior designers, has been built almost entirely in those seams.
 
-The thing that made that possible was not a smarter model. It was a harness: a product spec, three agents with unequal permissions, and a client that turns my attention into decisions instead of tasks.
+What made that possible was a custom-built agent harness and workflow built specifically for my hectic schedule.
 
 ![The loop: phone, orchestrator, subagents, merge gate](diagrams/1-the-loop.png)
 
@@ -16,7 +16,11 @@ The thing that made that possible was not a smarter model. It was a harness: a p
 
 ## The pieces, and the contract between them
 
-OpenCode Go is the agent runtime: a coding session on my machine with tools — shell, edit, git, `gh`. OpenChamber is the client. Desktop for the long passes; the Android and iOS apps for everything else, which is most of it. Claude Code is the escape hatch, running headless in its own git worktree when a task is bigger than one agent run.
+Out of all the plans available out there, I needed to find one that was both efficient and flexible. 
+
+OpenCode Go ticked all the boxes for me. Not only does the monthly Go plan give you a generous amount of access to lower-cost models such as **DeepSeek V4.1 Flash**
+
+is the agent runtime: a coding session on my machine with tools — shell, edit, git, `gh`. OpenChamber is the client. Desktop for the long passes; the Android and iOS apps for everything else, which is most of it. Claude Code is the escape hatch, running headless in its own git worktree when a task is bigger than one agent run.
 
 The contract is two files. `agent/PRD.md` is product scope: numbered features, each with the behaviour it must have. `AGENTS.md` is the constitution — stack, commands, conventions, and the list of things nobody may touch. Every queued task cites a PRD section, so "build me a thing" becomes a specific piece of the product. If I ask for something the PRD does not cover, the orchestrator says so and marks the task blocked rather than inventing scope. That one rule is worth more than any prompt I have written: it is what stops an agent from confidently building the wrong app.
 
@@ -50,18 +54,15 @@ Prose questions are effectively banned, because a paragraph on a phone becomes h
 
 ## Escalate by size, do not retry
 
-Small agent runs fail predictably: they exhaust their steps mid-feature with the work uncommitted. The obvious fix — more steps — was wrong, and the usage data said so. Nine of fifty-eight builder runs had stopped at exactly the old ceiling of sixty; nineteen of forty-nine reviews at exactly twenty. The cap had quietly become the budget.
+Smaller agent runs fail predictably: they exhaust their steps mid-feature with the work uncommitted. The obvious fix — more steps — was wrong, and the usage data said so. Nine of fifty-eight builder runs had stopped at exactly the old ceiling of sixty; nineteen of forty-nine reviews at exactly twenty. The cap ended up becoming the budget.
 
-So the caps came down and the rule changed. At the cap, an agent commits, pushes, opens a draft PR if there is not one already, and reports. If real work remains, the task is not re-dispatched. It is marked blocked with a written handoff: branch, what is done, what is left, the next command to run. Then Claude Code picks it up headless in a fresh worktree, reading that file. It inherits the same reviewer and the same no-merge rule, so escalation changes the worker, not the standard.
+So I scrapped the hard limit for steps and tried something else. At the cap, an agent commits, pushes, opens a draft PR if there is not one already, and reports. If real work remains, the task is not re-dispatched. It is marked blocked with a written handoff: branch, what is done, what is left, the next command to run. Then Claude Code picks it up headless in a fresh worktree, reading that file. It inherits the same reviewer and the same no-merge rule.
 
-That last part matters more than it sounds. The lazy version of this workflow is "ask the strong model when the weak one struggles", which turns every hard task into an unbounded session with no verdict. The version that works has one property: the gate is identical no matter who did the work.
+That last part matters more than it sounds. The lazy version of this workflow is "ask the strong model when the weak one struggles", which turns every hard task into an unbounded session with no verdict.
 
-## What the phone actually changed
+## What the phone experiment actually changed
 
-Not that I can code on a phone. I cannot. It is that the unit of my attention became a decision instead of a task. Before a session lets go, it writes the live state of every task into `STATUS.md`: what landed, what is blocked, what I owe, what nobody has seen. Any device can pick that up an hour later, or a week later. Each task gets its own worktree, so the next run starts from a known state instead of whatever the last one left behind.
+I still don't prefer working from a phone. I adore my multi-screen set up too much. But what this custom harness shows, is that things flow more smoothly once I decide that the units of my attention are **decisions** instead of task.
 
-## The honest part
+I prefer the arrangement a real organization already has with a junior developer. I spend less time guiding an agent through the back and forth, and I trust them to communicate clearly and briefly, so the only thing left for me is the decision. They do the hard work. They summarize the paths that could succeed, name the tradeoffs, and surface a few options. They ask as infrequently as possible.
 
-This harness fails in ways that look like progress. Reviewers go quiet after a provisional verdict, so an approval exists that nobody finished checking. Agents cannot see a device, which is how a UI card shipped with a scroll height picked from a diff and never once seen on a screen. Merge-ready worktrees accumulate. A confident answer is not evidence; only a probe against production is.
-
-None of that is fixed by a better model. It is fixed by an org chart: who may write, who may judge, what must be asked, and where the paper trail lives. The PRD is the product. The agents are staff. And the phone is where I sign off.
