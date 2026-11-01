@@ -87,11 +87,11 @@ the fields, and the platform handles the request and response for you.
 Once you see workflows as inputs, processes, and outputs, an API is just a
 doorway between two of them.
 
-## Case study: GoreMote.ph
+## Case study: Form Submissions with Make
 
-Dorxata built a custom Make workflow that takes form submissions from a website
-and updates the team's internal tracker. No copy-paste, no lead sitting in an
-inbox, no one reconciling two lists at the end of the week.
+A former client built a custom Make workflow that takes form submissions from a
+website and updates the team's internal tracker. No copy-paste, no lead sitting
+in an inbox, no one reconciling two lists at the end of the week.
 
 It is a small automation by the standards of enterprise software, and that is
 the point. The value was not technical sophistication. It was removing a
@@ -101,8 +101,7 @@ recurring, error-prone task from a person's day.
 
 The middle of the session was spent building n8n workflows live: a trigger, a
 few processing steps, and an output that does something visible. n8n also
-offered attendees a discount code — **MAX50** — for anyone who wanted to try it
-afterward.
+offered attendees a discount for anyone who wanted to try it afterward.
 
 ## Where AI fits
 
