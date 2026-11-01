@@ -473,6 +473,12 @@ main {
   color: var(--ink-soft);
 }
 
+.page-updated {
+  margin: 0.45rem 0 0;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
 /* --------------------------------------------------------------- article */
 
 .post-header {

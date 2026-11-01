@@ -20,7 +20,7 @@ export const SITE = {
     },
     { label: 'RSS', href: '/rss.xml' },
   ],
-  nowUpdated: '2026-11-11',
+  nowUpdated: '2026-11-01',
 } as const;
 
 /** The configured base path without a trailing slash ('' at the site root). */
