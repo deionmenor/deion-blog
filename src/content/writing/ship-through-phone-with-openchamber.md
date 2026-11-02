@@ -19,6 +19,8 @@ What made that possible was a custom-built [agent harness](https://github.com/de
 
 *Figure 1 — The loop. A phone session reads a five-line status, answers one checklist, and a PR comes back through a gate I control.*
 
+I found a useful framework for talking about this in Birgitta Böckeler's [harness engineering article](https://martinfowler.com/articles/harness-engineering.html) on martinfowler.com. The split that stuck with me is between **guides**, which steer the agent before it acts, and **sensors**, which check the result afterwards and feed corrections back. My harness was heavy on guides and light on sensors. Most of the work was closing that gap.
+
 ## The pieces, and the contract between them
 
 Out of all the plans available out there, I needed to find one that was both efficient and flexible. 
@@ -28,6 +30,8 @@ OpenCode Go ticked all the boxes for me. Not only does the monthly Go plan give 
 Out of the current lineup of available harnesses, I specifically wanted an open-source tool that excels at cross-device continuity (I run a Windows PC, CachyOS on my laptop, and have both an iPhone and Google Pixel). I also needed a workspace GUI that makes it incredibly easy to view multiple projects at a glance. Given that, I chose OpenChamber, which has an excellent Android application and offers a quick QR code setup for private remote access.
 
 The contract is simply made of two files. `agent/PRD.md` is the product scope: numbered features, each with the behaviour it must have. `AGENTS.md` has the rules — stack, commands, conventions, and the list of specifications nobody may touch. Every queued task cites a PRD section, so "build me X" becomes a specific piece of the product. If I ask for something the PRD does not cover, the orchestrator says so and marks the task blocked rather than inventing scope. That one rule is worth more than any prompt I have written: it is what stops an agent from confidently building the wrong app.
+
+In the framework's terms, those two files are feedforward guides. `AGENTS.md` carries the conventions the agent can't infer from the code: stack, commands, and what nobody may touch. The PRD carries behaviour: numbered features, each with something a reviewer can check. Requiring every task to cite a PRD section is what keeps the guide specific. A spec that can't be traced to an acceptance criterion is just background reading.
 
 ## The org chart
 
