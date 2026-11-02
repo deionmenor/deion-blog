@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import musilogShot from '../assets/musilog.png';
+import deckersShot from '../assets/deckers.png';
 import { formatDate } from '../lib/posts';
 import { SITE } from '../lib/site';
 
@@ -63,5 +64,27 @@ const updated = new Date(`${SITE.nowUpdated}T00:00:00Z`);
       <em>The Art of Doing Science and Engineering</em> by Richard Hamming, one
       chapter at a time.
     </p>
+
+    <h2>Playing</h2>
+    <p>
+      As far as board games go,{' '}
+      <a
+        href="https://boardgamegeek.com/boardgame/443306/deckers"
+        rel="noopener noreferrer"
+        target="_blank"
+      >Deckers</a
+      > really scratches a tactical puzzle itch that games like{' '}
+      <em>Into the Breach</em> scratches.
+    </p>
+
+    <figure class="now-thumb">
+      <Image
+        src={deckersShot}
+        alt="A game of Deckers in progress on a wooden table, with numbered hexagonal boards, colored tokens, and a character standee."
+        widths={[480, 800, 1080]}
+        sizes="(max-width: 640px) 100vw, 600px"
+        loading="lazy"
+      />
+    </figure>
   </div>
 </Base>
