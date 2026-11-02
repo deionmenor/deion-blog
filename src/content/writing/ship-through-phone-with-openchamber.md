@@ -1,13 +1,17 @@
 ---
 title: I Ship App Features From My Phone Now
-description: A PRD, three agents with deliberately unequal permissions, and a client that fits in a notification shade.
+description: Building an agent that should do the long work on its own and hand me only the decisions, cut small enough to make from my phone
 date: 2026-10-28
 tags: [ai, agents, workflow, productivity, tools, open-source]
 ---
 
-I help multiple founders build their products, so my calendar is filled to the brim with client calls. On top of that, my partner and I have ventured into the hectic industry of event planning, so the hours I have for building my own ideas are the seams between them: twenty minutes before a check-in, the queue at the government office, the last hour before I inevitably sleep with my hands still clutched to my mobile device.
+Every coding agent I’ve used makes the same assumption about me: that I’m sitting at a desk, watching it work, ready to answer the moment it has a question.
 
-Findly, a social app I've been developing for interior designers, has been built almost entirely within those seams.
+I’m almost never that person. I help several founders build their products, my partner and I have just started an event planning business, and whatever time is left for my own ideas comes in seams: twenty minutes before a check-in, a queue at a government office, the last hour of the night with my phone still in my hand.
+
+So my agents spent most of their time waiting. They weren’t waiting on compute or on code. They were waiting on me, for a thirty-second decision I wasn’t around to make.
+
+Findly, a social app I’ve been building for interior designers, got built anyway, almost entirely inside those seams. That happened because of a harness I designed around one idea: the agent should do the long work on its own and hand me only the decisions, cut small enough to make from my phone.
 
 What made that possible was a custom-built [agent harness](https://github.com/deionmenor/agent-harness) and workflow built specifically for my hectic schedule.
 
