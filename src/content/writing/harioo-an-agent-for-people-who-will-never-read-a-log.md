@@ -1,6 +1,6 @@
 ---
-title: "An Agent for People Who Will Never Read a Log"
-description: "What building Harioo taught me about harnesses that non-technical people can actually use — and the two things Claude Cowork and Perplexity get right about the surface."
+title: "I Built an Agent to Scope Client Leads. The Hard Part Wasn't the Model."
+description: "Harioo reads a lead’s site, prices the work and writes the brief before the call. What took the time was making the output safe for someone who can’t debug it."
 date: 2026-11-04
 tags: [ai, agents, automation, workflow, tools, work]
 ---
