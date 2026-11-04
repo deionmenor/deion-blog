@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="1520" height="920" role="img" aria-label="A mock of the Slack brief with margin notes showing which row came from the client, which was computed in code, which the model wrote, and which the browser read.">
+  <title>The brief, with the division of labour drawn on it</title>
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+
+    <!-- the brief -->
+    <rect x="20" y="20" width="486" height="420" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <text x="38" y="50" font-size="11.5" font-weight="600" fill="#111827">Brief · synthetic fixture lead</text>
+    <line x1="38" y1="62" x2="488" y2="62" stroke="#f2f0e5" stroke-width="1"/>
+
+    <text x="38" y="86" font-size="8.5" letter-spacing="1.2" font-weight="600" fill="#9ca3af">SUMMARY</text>
+    <text x="38" y="101" font-size="10.5" fill="#374151">A ceramics studio wants a shop with a cart and a</text>
+    <text x="38" y="115" font-size="10.5" fill="#374151">portfolio it can update itself.</text>
+
+    <text x="38" y="139" font-size="8.5" letter-spacing="1.2" font-weight="600" fill="#9ca3af">FIT</text>
+    <text x="38" y="154" font-size="10.5" fill="#374151">decline · 40/100 (fit rules v2)</text>
+
+    <text x="38" y="178" font-size="8.5" letter-spacing="1.2" font-weight="600" fill="#9ca3af">SCOPE</text>
+    <text x="38" y="193" font-size="10.5" fill="#374151">20–40 hours · USD 1,500–3,000 at USD 75/hour</text>
+
+    <text x="38" y="217" font-size="8.5" letter-spacing="1.2" font-weight="600" fill="#9ca3af">WHAT WE WOULD BUILD</text>
+    <text x="38" y="232" font-size="10.5" fill="#374151">The shop is the centre of the job: a storefront where the</text>
+    <text x="38" y="246" font-size="10.5" fill="#374151">cart belongs to the person shopping rather than to the page</text>
+    <text x="38" y="260" font-size="10.5" fill="#374151">they happen to be on.</text>
+
+    <text x="38" y="284" font-size="8.5" letter-spacing="1.2" font-weight="600" fill="#9ca3af">CALL QUESTIONS</text>
+    <text x="38" y="299" font-size="10.5" fill="#374151">Does checkout take payment on the site, or hand off to a</text>
+    <text x="38" y="313" font-size="10.5" fill="#374151">payment provider and come back?</text>
+
+    <text x="38" y="337" font-size="8.5" letter-spacing="1.2" font-weight="600" fill="#9ca3af">EVIDENCE</text>
+    <text x="38" y="352" font-size="10.5" fill="#374151">aria-shop.html — “a checkout page that forgets the cart on</text>
+    <text x="38" y="366" font-size="10.5" fill="#374151">refresh.” (cart) (screenshot)</text>
+
+    <text x="38" y="390" font-size="8.5" letter-spacing="1.2" font-weight="600" fill="#9ca3af">PEGS WE COULD NOT READ</text>
+    <text x="38" y="405" font-size="10.5" fill="#374151">northlight-studio.html — unreachable</text>
+
+    <!-- margin notes -->
+    <line x1="506" y1="97" x2="516" y2="97" stroke="#d1d5db" stroke-width="1"/>
+    <text x="524" y="97" font-size="10" font-style="italic" fill="#24837b">The client’s words,</text>
+    <text x="524" y="110" font-size="10" font-style="italic" fill="#24837b">kept as theirs</text>
+
+    <line x1="506" y1="150" x2="516" y2="150" stroke="#d1d5db" stroke-width="1"/>
+    <text x="524" y="150" font-size="10" font-style="italic" fill="#24837b">Computed in code</text>
+    <text x="524" y="163" font-size="10" font-style="italic" fill="#24837b">from the evidence</text>
+
+    <line x1="506" y1="228" x2="516" y2="228" stroke="#d1d5db" stroke-width="1"/>
+    <text x="524" y="228" font-size="10" font-style="italic" fill="#24837b">The model wrote this</text>
+    <text x="524" y="241" font-size="10" font-style="italic" fill="#24837b">— no figure in it</text>
+
+    <line x1="506" y1="295" x2="516" y2="295" stroke="#d1d5db" stroke-width="1"/>
+    <text x="524" y="295" font-size="10" font-style="italic" fill="#24837b">The model wrote these</text>
+
+    <line x1="506" y1="348" x2="516" y2="348" stroke="#d1d5db" stroke-width="1"/>
+    <text x="524" y="348" font-size="10" font-style="italic" fill="#24837b">The browser read this</text>
+    <text x="524" y="361" font-size="10" font-style="italic" fill="#24837b">and the screenshot proves it</text>
+
+    <line x1="506" y1="401" x2="516" y2="401" stroke="#d1d5db" stroke-width="1"/>
+    <text x="524" y="401" font-size="10" font-style="italic" fill="#24837b">And this is the part most</text>
+    <text x="524" y="414" font-size="10" font-style="italic" fill="#24837b">agents leave in the log</text>
+  </g>
+</svg>
